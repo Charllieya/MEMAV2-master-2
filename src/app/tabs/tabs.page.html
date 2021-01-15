@@ -1,0 +1,28 @@
+<ion-tabs #tabs selectedIndex="1">
+    <ion-tab-bar slot="bottom">
+        <ion-tab-button (click)="tab1()" tab="tab1">
+            <!-- (click)="tab1()" is a method similar to javascript's event listeners but in angular, it is called "Event Binding". Event allows you to allows you to listen for and respond to user actions such as keystrokes, mouse movements, clicks, and touches. We are using this method so when a user nagivates from one tab to another, tabs will automatically refresh to their respective root pages. The code that makes this work is in tabs.page.ts-->
+            <!-- <ion-icon name="triangle"></ion-icon> -->
+            <img src="assets/mema.png" height="25">
+            <ion-label>Home</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button (click)="tab2()" tab="tab2">
+            <!-- <ion-icon name="ellipse"></ion-icon> -->
+            <img src="assets/tab3/clip.png" height="25">
+            <ion-label>Make Your Plan</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button (click)="tab3()" tab="tab3">
+            <!-- <ion-icon name="square"></ion-icon> -->
+            <img src="assets/tab3/map2.png" height="25">
+            <ion-label>Maps</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button (click)="tab3()" tab="tab4">
+            <!-- <ion-icon name="square"></ion-icon> -->
+            <img src="assets/tab3/tool2.png" height="25">
+            <ion-label>Tools</ion-label>
+        </ion-tab-button>
+    </ion-tab-bar>
+</ion-tabs>

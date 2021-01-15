@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-row>
+            <ion-col>
+                <ion-nav-link [routerLink]="['/tabs/tab2/']">BACK</ion-nav-link>
+            </ion-col>
+        </ion-row>
+        <ion-title>YOUR PLAN</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card-header>CHECKLIST</ion-card-header>
+    <ion-item *ngFor="let emergencyItems of emergencyItem" (click)="onClick(emergencyItems)">
+        <ion-label>{{emergencyItems.name}}</ion-label>
+        <ion-checkbox type="checkbox" [(ngModel)]="emergencyItems.checked" [checked]="emergencyItems.name"></ion-checkbox>
+    </ion-item>
+    <ion-card-header>
+        <ion-title>Your Checklist</ion-title>
+    </ion-card-header>
+    <ion-input type="text"></ion-input>
+    <ion-button style="align-content: center">ADD</ion-button>
+</ion-content>

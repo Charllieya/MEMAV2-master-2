@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-row>
+            <ion-col>
+                <ion-nav-link [routerLink]="['/tabs/tab2/']">BACK</ion-nav-link>
+            </ion-col>
+        </ion-row>
+        <ion-title>YOUR PLAN</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <form #userForm='ngForm'>
+        <ion-item>
+            <ion-label floating>First Name</ion-label>
+            <ion-input type="text" name="firstName" [(ngModel)]="userData.firstName"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Last Name</ion-label>
+            <ion-input type="text" name="lastName" [(ngModel)]="userData.lastName"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Relationship</ion-label>
+            <ion-input type="text" name="lastName" [(ngModel)]="userData.relationship"></ion-input>
+        </ion-item>
+        <ion-item (click)="saveData(userData)">
+            <button ion button>Save</button>
+        </ion-item>
+    </form>
+
+    <script type="text/javascript">
+        console.log(localStorage)
+    </script>
+
+</ion-content>
