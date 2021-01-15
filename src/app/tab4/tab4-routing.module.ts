@@ -1,13 +1,20 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
 
-import { Tab4Page } from './tab4.page';
+import { Tab4Page } from "./tab4.page";
 
 const routes: Routes = [
   {
-    path: '',
-    component: Tab4Page
-  }
+    path: "",
+    component: Tab4Page,
+  },
+  {
+    path: "flashlight",
+    loadChildren: () =>
+      import("../tab4details/flashlight/flashlight.module").then(
+        (m) => m.FlashlightPageModule
+      ),
+  },
 ];
 
 @NgModule({
