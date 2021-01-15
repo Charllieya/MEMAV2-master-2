@@ -8,28 +8,38 @@
         <ion-title>YOUR PLAN</ion-title>
     </ion-toolbar>
 </ion-header>
-
 <ion-content padding>
-    <form #userForm='ngForm'>
-        <ion-item>
-            <ion-label floating>First Name</ion-label>
-            <ion-input type="text" name="firstName" [(ngModel)]="userData.firstName"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label floating>Last Name</ion-label>
-            <ion-input type="text" name="lastName" [(ngModel)]="userData.lastName"></ion-input>
-        </ion-item>
-        <ion-item>
-            <ion-label floating>Relationship</ion-label>
-            <ion-input type="text" name="lastName" [(ngModel)]="userData.relationship"></ion-input>
-        </ion-item>
-        <ion-item (click)="saveData(userData)">
-            <button ion button>Save</button>
-        </ion-item>
-    </form>
+    <h4> Add person </h4>
+    <ion-item>
+        <label>Firstname:</label>
+        <ion-input [(ngModel)]="firstname" name="firstname" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+        <label>Lastname:</label>
+        <ion-input [(ngModel)]="lastname" name="lastname" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+        <label>Age:</label>
+        <ion-input [(ngModel)]="age" name="age" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+        <label></label>
+        <button (click)="addPerson()">Add</button>
+    </ion-item>
+
+    <!-- <h4> Get person </h4>
+    <input [(ngModel)]="queryKey" name="queryKey" type="text"><br>
+    <button (click)="getPerson(queryKey)"> Get </button>
+    <h4>Result</h4>
+    {{queryResult}}
+    <h4> Delete person</h4>
+    <ion-input [(ngModel)]="removeKey" name="removeKey" type="text"></ion-input> <br>
+    <button (click)="deletePerson(removeKey)"> Delete </button> -->
+    <h4> Reset store </h4>
+    <button (click)="reset()"> Reset </button>
 
     <script type="text/javascript">
         console.log(localStorage)
     </script>
 
-</ion-content>
+    <!-- </ion-content> -->
