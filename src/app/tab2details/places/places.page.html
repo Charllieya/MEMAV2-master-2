@@ -11,33 +11,14 @@
 
 <ion-content>
     <ion-card-header>EMERGENCY MEETING PLACES</ion-card-header>
-    <ion-card-content>
-        <ion-header>INDOOR</ion-header>
-        <ion-text>If you live in an area where tornadoes, hurricanes, or other high-wind storms can happen, make sure everyone knows where to go for protection. This could be a small, interior, windowless room, such as a closet or bathroom, on the lowest level
-            of sturdy building, or a tornado safe room or storm shelter.
+    <ion-item *ngFor="let emergencyPlaces of emergencyPlace">
+        <ion-text>{{emergencyPlaces.title}} <br />
+            <ion-text>{{emergencyPlaces.name}} </ion-text>
+            <ion-card-content>
+                <ion-label>Instructions:</ion-label>
+                <ion-input type="text" [(ngModel)]="emergencyPlaces.input" [inputmode]="emergencyPlaces.name"></ion-input>
+            </ion-card-content>
         </ion-text>
-        <ion-input type="text">Instructions: </ion-input>
-    </ion-card-content>
-    <ion-card-content>
-        <ion-header>NEIGHBORHOOD</ion-header>
-        <ion-text>This is a place in your neighborhood where your household members will meet if there is a fire or other emergency and you need to leave your home. The meeting place could be a big tree, a mailbox at the end of the driveway, or a neighbor's house.
-        </ion-text>
-        <ion-input type="text">Instructions: </ion-input>
-    </ion-card-content>
-    <ion-card-content>
-        <ion-header>OUT-OF-NEIGHBORHOOD</ion-header>
-        <ion-text>This is a place where your family will meet if a diaster happens when you're not at home and you can't get back to your home. This could be a library, community center, house of worship, or family friend's home
-        </ion-text>
-        <ion-input type="text">Instructions: </ion-input>
-        <ion-input type="text">Address: </ion-input>
-    </ion-card-content>
-    <ion-card-content>
-        <ion-header>OUT-OF-TOWN</ion-header>
-        <ion-text>Having an out-of-town meeting place can help you reunite if a diaster happens and you cannot get home or to your out-of-neighborhood meeting place; or your family is not together and your community is instructed to evacuate the area. This meeting
-            place could be the home of a relative or family friend. Make sure everyone knows the address of the meeting place and dicuss ways you could get there.
-        </ion-text>
-        <ion-input type="text">Instructions: </ion-input>
-        <ion-input type="text">Address: </ion-input>
-    </ion-card-content>
-    <ion-button>Save</ion-button>
+    </ion-item>
+    <ion-button (click)="onClick(emergencyPlace)">SAVE</ion-button>
 </ion-content>

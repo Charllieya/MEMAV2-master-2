@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Storage } from "@ionic/storage";
+import { NavController } from "@ionic/angular";
 
 @Component({
   selector: "app-supplies",
@@ -65,7 +66,7 @@ export class SuppliesPage {
       checked: false,
     },
   ];
-  constructor() {
+  constructor(private navCtrl: NavController) {
     // Called first time before the ngOnInit()
     var myArr = [];
     console.log("constructor()... ");

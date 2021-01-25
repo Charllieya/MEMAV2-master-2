@@ -9,26 +9,52 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
     <ion-item>
-        <ion-label position="floating">Name/Type</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-label position="floating">Name/Type:</ion-label>
+        <ion-input [(ngModel)]="name" name="firstname" type="text"></ion-input>
     </ion-item>
     <ion-item>
-        <ion-label position="floating">Policy Number</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-label>Policy Number:</ion-label>
+        <ion-input [(ngModel)]="policyNum" name="lastname" type="number"></ion-input>
     </ion-item>
     <ion-item>
-        <ion-label position="floating">Company</ion-label>
-        <ion-input type="number"></ion-input>
+        <ion-label>Company:</ion-label>
+        <ion-input [(ngModel)]="company" name="age" type="text"></ion-input>
     </ion-item>
     <ion-item>
-        <ion-label position="floating">Phone</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-label>Phone:</ion-label>
+        <ion-input [(ngModel)]="phone" name="age" type="number"></ion-input>
     </ion-item>
     <ion-item>
-        <ion-label position="floating">Agent</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-label>Agent:</ion-label>
+        <ion-input [(ngModel)]="agent" name="age" type="text"></ion-input>
     </ion-item>
-    <ion-button>Save</ion-button>
+    <ion-item>
+        <label></label>
+        <ion-button (click)="addPerson()">Add</ion-button>
+    </ion-item>
+
+    <!-- <h4> Get person </h4>
+    <input [(ngModel)]="queryKey" name="queryKey" type="text"><br>
+    <button (click)="getPerson(queryKey)"> Get </button>
+    <h4>Result</h4>
+    {{queryResult}}
+    <h4> Delete person</h4>
+    <ion-input [(ngModel)]="removeKey" name="removeKey" type="text"></ion-input> <br>
+    <button (click)="deletePerson(removeKey)"> Delete </button> -->
+
+    <!-- <ion-label> Delete person</ion-label>
+    <ion-input [(ngModel)]="removeKey" name="removeKey" type="text"></ion-input>
+    <br />
+    <button (click)="deletePerson(removeKey)">Delete</button>
+
+    <h4>Reset store</h4>
+    <button (click)="reset()">Reset</button>
+
+    <script type="text/javascript">
+        console.log(localStorage);
+    </script> -->
+
+    <!-- </ion-content> -->
 </ion-content>

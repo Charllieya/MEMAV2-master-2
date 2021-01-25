@@ -9,17 +9,16 @@
     </ion-toolbar>
 </ion-header>
 <ion-content padding>
-    <h4> Add person </h4>
     <ion-item>
-        <label>Firstname:</label>
+        <ion-label position="floating">Firstname:</ion-label>
         <ion-input [(ngModel)]="firstname" name="firstname" type="text"></ion-input>
     </ion-item>
     <ion-item>
-        <label>Lastname:</label>
+        <ion-label>Lastname:</ion-label>
         <ion-input [(ngModel)]="lastname" name="lastname" type="text"></ion-input>
     </ion-item>
     <ion-item>
-        <label>Age:</label>
+        <ion-label>Age:</ion-label>
         <ion-input [(ngModel)]="age" name="age" type="number"></ion-input>
     </ion-item>
     <ion-item>
@@ -35,11 +34,18 @@
     <h4> Delete person</h4>
     <ion-input [(ngModel)]="removeKey" name="removeKey" type="text"></ion-input> <br>
     <button (click)="deletePerson(removeKey)"> Delete </button> -->
-    <h4> Reset store </h4>
-    <button (click)="reset()"> Reset </button>
+
+    <ion-label> Delete person</ion-label>
+    <ion-input [(ngModel)]="removeKey" name="removeKey" type="text"></ion-input>
+    <br />
+    <button (click)="deletePerson(removeKey)">Delete</button>
+
+    <h4>Reset store</h4>
+    <button (click)="reset()">Reset</button>
 
     <script type="text/javascript">
-        console.log(localStorage)
+        console.log(localStorage);
     </script>
 
     <!-- </ion-content> -->
+</ion-content>

@@ -11,5 +11,25 @@
 
 <ion-content>
     <ion-card-header>EMERGENCY CONTACTS</ion-card-header>
-    <ion-button [routerLink]="['/tabs/tab2/contacts/info']">ADD NEW CONTACT</ion-button>
+    <!-- <ion-item *ngFor="let persons of person">
+        <ion-card-content>
+            <ion-text>{{persons.firstname}}</ion-text>
+        </ion-card-content>
+    </ion-item> -->
+    <ion-content padding>
+        <ion-card *ngIf="person">
+            <!-- <ion-card-header>
+                <ion-card-title> {{ person.firstname }} </ion-card-title>
+                <ion-card-subtitle> {{ person.lastname }} </ion-card-subtitle>
+            </ion-card-header> -->
+            <ion-card-content>
+                <ion-card *ngFor="let persons of person.id;let i = index">
+                    {{ this.persons}}
+                </ion-card>
+                <ion-text> {{ this.person}} </ion-text>
+                <!-- <ion-text> {{ this.person.lastName }} </ion-text> -->
+            </ion-card-content>
+        </ion-card>
+        <ion-button [routerLink]="['/tabs/tab2/contacts/info']">ADD NEW CONTACT</ion-button>
+    </ion-content>
 </ion-content>
